@@ -149,7 +149,7 @@ A partir de les dades de temperatura obtingudes per a cada barra obtenim la grà
 \begin{Figura}
   \centering
   \includegraphics[width = 1\linewidth]{../../graphs/practica_Ia/plots/theta_vs_d_estacionaria.png}\label{DeltaT_vs_d}
-  \captionof{figure}{\footnotesize{Increment de temperatura $\theta$ respecte a la disància, punts experimentals i regressió exponencial. Coeficients de regressió: $r^2_{\text{Al}} = 0.999$, $r^2_{\text{Cu-Zn}} = 0.991$ i $r^2_{\text{Fe}} = 0.998$}}
+  \captionof{figure}{\footnotesize{Increment de temperatura $\theta$ respecte a la disància, punts experimentals i regressió exponencial. Coeficients de regressió: $r^2_{\text{Al}} = 0,999$, $r^2_{\text{Cu-Zn}} = 0,991$ i $r^2_{\text{Fe}} = 0,998$}}
 \end{Figura}
 
 Per a trobar el valor experimental de $p$ de l'Equació \eqref{prom_temp} apliquem logaritme als valors experimentals per a poder realitzar una regressió lineal. Observem aquestes dades experimentals i les rectes de regressió a la Figura \ref{lnDeltaT_vs_d}. A la Taula \ref{Tau:dades_regressio} s'observen els valors ajustats de les regressions.
@@ -169,7 +169,7 @@ Per a trobar el valor experimental de $p$ de l'Equació \eqref{prom_temp} apliqu
 \begin{Figura}
   \centering
   \includegraphics[width = 1\linewidth]{../../graphs/practica_Ia/plots/reg_estacionaria.png}\label{lnDeltaT_vs_d}
-  \captionof{figure}{\footnotesize{Regressió lineal del logaritme de les temperatures per a cada material. Coeficients de regressió obtinguts: $r^2_{\text{Al}}=0.983$, $r^2_{\text{Cu-Zn}}=0.990$, $r^2_{\text{Fe}}=0.976$.}}
+  \captionof{figure}{\footnotesize{Regressió lineal del logaritme de les temperatures per a cada material. Coeficients de regressió obtinguts: $r^2_{\text{Al}}=0,983$, $r^2_{\text{Cu-Zn}}=0,990$, $r^2_{\text{Fe}}=0,976$.}}
 \end{Figura}           
 Tenint en compte de l'equació \eqref{sol_estacionaria}, què val $p$ (el valor absolut de les $a$ a la Taula \ref{Tau:dades_regressio}) i suposant el mateix valor constant del coeficient $\lambda$ per als tres metalls observem la temperatura d'un metall decau com $(Kr)^{1/2}$. Deduim doncs que la conductivitat tèrmica dels tres metalls és diferent i que es compleix
 \begin{equation*}
@@ -233,7 +233,7 @@ per a l'aportació de la llei d'Stefan-Boltzmann. Calculant aquests llindars ten
   \end{tabular}
   \label{tau:comp_potencies}
 \end{Figura}
-Cal aclarir novament que aquestes dades es tracten de llindars, la potència absorbida o emesa pel sistema és diferent a cada punt i depèn d'altres factors, per exemple del ventilador que manté un flux d'aire al voltant de les barres. Tot i això, les dades ens són suficients per a notar que l'aportació de pèrdues per radiació, seguint la llei d'Stefan-Boltzmann, és molt petita en comparació amb les altres dos. Sabent això concluim que podem menysprear del nostre model de l'aportació de la radiació.
+Cal aclarir novament que aquestes dades es tracten de llindars, la potència absorbida o emesa pel sistema és diferent a cada punt i depèn d'altres factors, per exemple del ventilador que manté un flux d'aire al voltant de les barres. Tot i això, les dades ens són suficients per a notar que l'aportació de pèrdues per radiació, seguint la llei d'Stefan-Boltzmann i considerant una emisivitat ideal ($e=1$), és molt petita en comparació amb les altres dos. Sabent això concluim que podem menysprear del nostre model de l'aportació de la radiació.
 \subsection{Estat permanent}
 A partir de les dades obtingudes experimentalment representem l'evolució temporal de la temperatura segons cada posició de la barra gran, Figura \ref{fig:T_vs_t_gran}, i de la barra petita, \ref{fig:T_vs_t_petita}.
 \begin{Figura}
@@ -267,7 +267,7 @@ Com a pas previ a observar el desfasament, calculem la temperatura mitjana a cad
   \end{tabular}
   \label{Tau:mitjanes}
 \end{Figura}
-Observem com la temperatura mitjana decau amb la distància respecte a l'origen de referència. Clarament són pocs punts experimentals com per a traçar una corba de tendència. Tot i això, qualitativament els valors obtinguts s'apropen al que prediu la teoria. En cas de repetir l'experiment amb més termoparells repartits al llarg de cadascuna de les barres observariem un comportament de la mitjana temporal de la temperatura com el de l'Equació \eqref{prom_temp}. Si apliquem el mateix mètode que a l'estat estacionari per a obtenir el valor de $p$ obtenim els valors que s'observen a la Taula \ref{tau:pendent_mitjana}. A partir d'aquestes dades realitzem una regressió i observem, Figura \ref{fig:lin_reg} com s'apropen molt a un comportament lineal.
+Observem com la temperatura mitjana decau amb la distància respecte a l'origen de referència. Clarament són pocs punts experimentals com per a traçar una corba de tendència. Tot i això, qualitativament els valors obtinguts s'apropen al que prediu la teoria. En cas de repetir l'experiment amb més termoparells repartits al llarg de cadascuna de les barres observariem un comportament de la mitjana temporal de la temperatura com el de l'Equació \eqref{prom_temp}. Si apliquem el mateix mètode que a l'estat estacionari per a obtenir el valor de $p$ obtenim els valors que s'observen a la Taula \ref{Tau:pendent_mitjana}. A partir d'aquestes dades realitzem una regressió i observem, Figura \ref{fig:lin_reg} com s'apropen molt a un comportament lineal.
 \begin{Figura}
   \centering
   \captionof{table}{\footnotesize{Valors ajustats per a una regressió lineal, amb model $y = ax + b$, on $y$ és el logaritme de les temperatures mitjanes i $x$ les posicions $x_i$.}}
@@ -281,7 +281,7 @@ Observem com la temperatura mitjana decau amb la distància respecte a l'origen 
 \begin{Figura}
   \centering
   \includegraphics[width=1\linewidth]{../../graphs/practica_Ia/plots/linear_reg.png}
-  \captionof{figure}{\footnotesize{Regressió lineal del logaritme de temperatures respecte a la posició. Coeficients de regressió obtinguts: $r^2$ = 0.999 tant per a la barra gran com per a la barra petita.}}
+  \captionof{figure}{\footnotesize{Regressió lineal del logaritme de temperatures respecte a la posició. Coeficients de regressió obtinguts: $r^2$ = 0,999 tant per a la barra gran com per a la barra petita.}}
   \label{fig:lin_reg}
 \end{Figura}
 Un cop calculades les mitjanes per a cada punt, podem normalitzar les dades experimentals dividint per la seva temperatura mitjana corresponent. Aplicant aquest mètode i, per a obtenir més detall, escollint com a molt els dos primers periodes d'oscil·lació obtenim la Figura \ref{fig:T_vs_t_gran_norm} per a la barra gran i la Figura \ref{fig:T_vs_t_petita_norm} per a la barra petita.
@@ -303,7 +303,7 @@ Per a determinar l'amplitud de la ona a cada punt per a cada barra escollim un p
   \centering
   \captionof{table}{\footnotesize{Amplitud promig de la ona tèrmica sesgons la distància al punt de referència per a la barra gran.}}
   \begin{tabular}{c|c}
-    $x_i$ ($\pm$0.1) [cm] & $\bar{a}_i$ ($\pm$0.001) [$^\circ$C]  \\ \hline
+    $x_i$ ($\pm$0,1) [cm] & $\bar{a}_i$ ($\pm$0,001) [$^\circ$C]  \\ \hline
     0 & 2,963\\
     10 & 1,218\\
     15 & 0,802 
@@ -314,12 +314,12 @@ Per a determinar l'amplitud de la ona a cada punt per a cada barra escollim un p
   \centering
   \captionof{table}{\footnotesize{Amplitud promig de la ona tèrmica sesgons la distància al punt de referència per a la barra petita.}}
   \begin{tabular}{c|c}
-    $x_i$ ($\pm$0.1) [cm] & $\bar{a}_i$ ($\pm$0.001) [$^\circ$C]  \\ \hline
+    $x_i$ ($\pm$0,1) [cm] & $\bar{a}_i$ ($\pm$0,001) [$^\circ$C]  \\ \hline
     0 & 5,404\\
     10 & 2,273\\
     20 & 0,961  
   \end{tabular}
-  \label{tau:amplituds_mitjanes_gran}
+  \label{tau:amplituds_mitjanes_petita}
 \end{Figura} 
 Es pot observar com segueixen un comportament exponencial, similar al que hem vist a la Taula \ref{Tau:mitjanes}. Apliquem novament el mateix mètode amb les amplituds que amb les temperatures mitjanes i obtenim les regressions de la Figura \ref{fig:reg_lin_amplituds} i els valors dels pendents de la Taula \ref{tau:pendent_amplituds}.
 \begin{Figura}
@@ -335,7 +335,7 @@ Es pot observar com segueixen un comportament exponencial, similar al que hem vi
 \begin{Figura}
   \centering
   \includegraphics[width=1\linewidth]{../../graphs/practica_Ia/plots/reg_ampli.png}
-  \captionof{figure}{\footnotesize{Regressió lineal del logaritme de les amplituds respecte a la posició. Coeficients de regressió obtinguts: $r^2$ = 0.999 tant per a la barra gran com per a la barar petita.}}
+  \captionof{figure}{\footnotesize{Regressió lineal del logaritme de les amplituds respecte a la posició. Coeficients de regressió obtinguts: $r^2$ = 0,999 tant per a la barra gran com per a la barar petita.}}
   \label{fig:reg_lin_amplituds}
 \end{Figura}
 Tenint en compte el comportament del desfasament i de les amplituds podem dir que les ones tèrmiques no són simètriques espaialment, decauen i pateixen un desfasament amb la distància.\\\\
@@ -355,7 +355,7 @@ Calculem ara el periode de les oscil·lacions. Per a fer-ho mesurem la distànci
 \end{equation*}
 Sabent aquesta dada podem calcular el temps d'escalfament o de refredament mig senzillament dividint el periode a la meitat:
 \begin{equation*}
-  t_{\text{esc/ref}} = (325,024\pm0.001) \, \text{s}
+  t_{\text{esc/ref}} = (325,024\pm0,001) \, \text{s}
 \end{equation*}
 Fent servir els màxims per a cada $x_i$ d'una mateixa barra podem calcular el desfasament entre dos punts. Tenint en compte l'Equació \eqref{increment_desfasament} podem calcular el valor de $h$ per a cada parell $x_i$. Fent la mitjana d'aquests valors (veure Annex) i apliacant-ho a cada barra trobem
 \begin{equation*}
@@ -368,19 +368,19 @@ per a la barra gran i
 per a la barra petita.\\\\
 Sabent tant els valors de $h$ i de $m$ per a cada barra podem calcular el valor de $\lambda$ segons l'Equació \ref{valor_lambda}. Fem servir el valor de la conductivitat tèrmica de l'alumini trobat a la literatura a la secció anterior i com a radis fem servir
 \begin{equation*}
-  r_{\text{gran}} = (2,6\pm0.1)\, \text{cm}
+  r_{\text{gran}} = (2,6\pm0,1)\, \text{cm}
 \end{equation*}
 \begin{equation*}
-  r_{\text{petita}} = (1,5\pm0.1)\, \text{cm}
+  r_{\text{petita}} = (1,5\pm0,1)\, \text{cm}
 \end{equation*}
 per a la barra gran i la barra petita, respectivament. Aleshores, calculem els valors de $\lambda$ i obtenim
 \begin{equation*}
-  \lambda_{\text{gran}} = (-0.21\pm0.72)\cdot 10^{-2} \, \text{W}/\text{Kcm}^{2}
+  \lambda_{\text{gran}} = (-0,21\pm0,72)\cdot 10^{-2} \, \text{W}/\text{Kcm}^{2}
 \end{equation*}
 \begin{equation*}
-  \lambda_{\text{petita}} = (-0.07\pm0.19)\cdot 10^{-2} \, \text{W}/\text{K}\text{cm}^{2}
+  \lambda_{\text{petita}} = (-0,07\pm0,19)\cdot 10^{-2} \, \text{W}/\text{K}\text{cm}^{2}
 \end{equation*}
-Observem com el valor del coeficient de convecció pren un valor amb molta incertesa. També es pot notar com aquest coeficient creix amb l'àrea de la barra. Tot i això, no podem dir que els resultats coincideixen amb la realitat. Comparant amb resultats calculats amb les dades de la secció anterior aquests coeficients poden entrar dins del esperat, però només per a causa de tenir un error molt alt. Observem aquests coeficients a la Taula \ref{lambdas_alum_est}.
+Observem com el valor del coeficient de convecció pren un valor amb molta incertesa. També es pot notar com aquest coeficient creix amb l'àrea de la barra. Tot i això, no podem dir que els resultats coincideixen amb la realitat. Comparant amb resultats calculats amb les dades de la secció anterior aquests coeficients poden entrar dins del esperat, però només a causa de tenir un error molt alt. Observem aquests coeficients a la Taula \ref{lambdas_alum_est}.
 \begin{Figura}
   \centering
   \captionof{table}{\footnotesize{Coeficients de convecció per a una barra d'alumini gran i petita (\(r_g=2.6\,\text{cm}\) i \(r_p =1.5\,\text{cm}\)) calculats amb les dades de la secció de l'estat estacionari.}}
@@ -389,6 +389,7 @@ Observem com el valor del coeficient de convecció pren un valor amb molta incer
     Gran & $0,291\pm0,042$\\
     Petita & $0,168\pm0,026$ 
   \end{tabular}
+  \label{lambdas_alum_est}
 \end{Figura}
 \section{Conclusions}
 Al llarg de la pràctica s'ha posat de manifest com les diferents equacions de transport de calor defineixen el comportament del nostre sistema. Tenint en compte aquestes aportacions de cada equació, hem obtingut dues solucions per a diferents sistemes termodinàmics.\\\\
@@ -536,7 +537,7 @@ Per a calcular la incertesa dels valors mesurats directament al laboratori s'ha 
       \centering
       \captionof{table}{\footnotesize{Valors de $h$ per a diferents increments $\Delta x_i$ per a la barra petita}}
       \begin{tabular}{c|c}
-        $\Delta x_i$ [cm]  & $h_{\text{gran}}$ [cm$^{-1}$]\\ \hline\hline
+        $\Delta x_i$ [cm]  & $h_{\text{petita}}$ [cm$^{-1}$]\\ \hline\hline
         10 - 0 & $0,082\pm0,005$ \\
         20 - 10 & $0,095\pm0,006$ \\
         20 - 0 & $0,088\pm0,003$

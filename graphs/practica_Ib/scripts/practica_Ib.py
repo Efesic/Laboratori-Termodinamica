@@ -187,7 +187,7 @@ p_conv = np.exp(p_extrapol)
 p_rad  = p_elec - p_conv
 p_rad = p_rad.tolist()
 theta_rad = theta[3:]
-
+theta_rad = [a + T_amb for a in theta_rad]
 #Errors
 u_p_rad = np.sqrt((u_ln_P_el[3:]*p_elec)**2+(u_p_extrapol*p_conv)**2)
 u_ln_p_rad = u_p_rad/p_rad
@@ -210,8 +210,8 @@ y = coef[0]*x+coef[1]
 
 plt.figure(figsize=(8,6))
 plt.errorbar(theta_rad,np.log(p_rad),xerr=u_theta_rad,yerr=u_ln_p_rad,marker='D',label='Punts calculats',linestyle='',capsize=5,elinewidth=0.7,color='rebeccapurple')
-plt.plot(x,y,linestyle='--',color='darkslategrey',label='Recta de regressió')
-plt.xlabel('$\ln{\Delta T}$')
+plt.plot(x,y,linestyle='--',color='k',label='Recta de regressió')
+plt.xlabel('$\ln{T}$')
 plt.ylabel('$\ln{P_{r}}$')
 plt.minorticks_on()
 plt.tick_params(which= 'major', direction='in',top = True,right =True,size = 10)
@@ -219,7 +219,7 @@ plt.tick_params(which= 'minor', direction='in',top = True,right =True,size = 5)
 plt.grid(linestyle='--')
 plt.legend(fontsize=14)
 plt.tight_layout()
-plt.savefig('graphs/practica_Ib/plots/lnp_rad_vs_lnDelta_T.png',dpi=300)
+plt.savefig('graphs/practica_Ib/plots/lnp_rad_vs_ln_T.png',dpi=300)
 
 print()
 print('REGRESSIÓ LINEAL LN(P_RAD) VS LN(DELTA_T)')
@@ -249,12 +249,14 @@ print()
 print('Coeficients del ajust quàrtic: ', coef4)
 print('Coeficient de regressió r2: ',r2)
 x= np.linspace(T[0],T[-1],100)
-y= coef4[0]*x**coef[1]
+y= coef4[0]*x**coef4[1]
 
+# Errors
+u_rad = [0.01]*(len(rad)-1)
 
 plt.figure(figsize=(8,6))
 plt.plot(x,y,linestyle='--',color='k',label='Ajust polinòmic')
-plt.scatter(T,rad[1:],label='Dades experimentals',marker='D',color='forestgreen')
+plt.errorbar(T,rad[1:],xerr=u_T,yerr=u_rad,marker='D',label='Punts experimentals',linestyle='',capsize=5,elinewidth=0.7,color='firebrick')
 plt.xlabel('$T$')
 plt.ylabel('$Rad$')
 plt.minorticks_on()
@@ -283,11 +285,15 @@ print()
 print('Coeficients del ajust lineal: ', coef4)
 print('Coeficient de regressió r2: ',r2)
 
+# Errors
+
+u_ln_T = u_T/T
+u_ln_rad = np.array(u_rad)/rad[1:]
 plt.figure(figsize=(8,6))
 plt.plot(x,y,linestyle='--',color='k',label='Ajust lineal')
-plt.scatter(np.log(T),np.log(rad[1:]),label='Dades experimentals',marker='D',color='forestgreen')
-plt.xlabel('$\ln{(T)}$')
-plt.ylabel('$\ln{(Rad)}$')
+plt.errorbar(np.log(T),np.log(rad[1:]),xerr=u_ln_T,yerr=u_ln_rad,marker='D',label='Punts experimentals',linestyle='',capsize=5,elinewidth=0.7,color='firebrick')
+plt.xlabel('$\ln{T}$')
+plt.ylabel('$\ln{Rad}$')
 plt.minorticks_on()
 plt.tick_params(which= 'major', direction='in',top = True,right =True,size = 10)
 plt.tick_params(which= 'minor', direction='in',top = True,right =True,size = 5)

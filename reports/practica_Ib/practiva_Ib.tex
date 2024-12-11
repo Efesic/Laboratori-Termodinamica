@@ -118,13 +118,15 @@ Tenint en compte l'Equació \eqref{relacions_pot} podem calcular a la segona reg
   \captionof{figure}{\footnotesize{Ampliació gràfica i recta de extrpolació.}}
   \label{extrapolacio}
 \end{Figura}
-Amb aquest conjunt de dades $\ln{P_{\text{e}}}$ i $\ln{P_{\text{c}}}$ a la regió de la dreta recalculem els valors $P_{\text{e}}$ i $P_{\text{c}}$ corresponents i apliquem l'Equació \eqref{relacions_pot}. Amb el resultat tornem a graficar els logaritmes, obtenint la Figura \ref{fig:lnP_rad_vs_lnDeltaT}
+Amb aquest conjunt de dades $\ln{P_{\text{e}}}$ i $\ln{P_{\text{c}}}$ a la regió de la dreta recalculem els valors $P_{\text{e}}$ i $P_{\text{c}}$ corresponents i apliquem l'Equació \eqref{relacions_pot}. Amb el resultat tornem a graficar els logaritmes, obtenint la Figura \ref{fig:lnP_rad_vs_ln_T}
 \begin{Figura}
   \centering
-  \includegraphics[width=\linewidth]{../../graphs/practica_Ib/plots/lnp_rad_vs_lnDelta_T.png}
+  \includegraphics[width=\linewidth]{../../graphs/practica_Ib/plots/lnp_rad_vs_ln_T.png}
   \captionof{figure}{\footnotesize{Logaritme de log(Prad) vs log(DeltaT). Poner aquí los datos de regresión}}
+  \label{fig:lnP_rad_vs_ln_T}
 \end{Figura}
-Comparant amb l'Equació \eqref{ln_Stefan_Boltzmann}
+Comparant amb l'Equació \eqref{ln_Stefan_Boltzmann} el pendent d'aquesta regressió hauria de ser de 4. Però, com es pot veure de les dades de la regressió, aquest valor teòric no entra dins de les incerteses. Aquesta discrepància pot venir de la contribució de la convecció, que pot estar aportant valors significatius a la potència emesa per la bombeta, o per la forma de mesurar aquest conjunt de dades, és a dir, per la poca precissió de les eines fetes servir al laboratori. Aquest errors experimentals es veuen amplificats amb la propagació d'incerteses, fet que s'arriba a veure tant a la Figura \ref{fig:lnP_rad_vs_ln_T} com a la Figura \ref{outliers} de l'Annex (sense eliminar outliers).\\\\
+
 \section{Conclusions}
 \section{Annex}
 \end{multicols}
