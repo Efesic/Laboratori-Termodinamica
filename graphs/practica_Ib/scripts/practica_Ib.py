@@ -9,8 +9,8 @@ df = pd.read_excel('graphs/practica_Ib/dades_Ib.xlsx',usecols=(0,1,2,3),header=N
 R_0 = 49.1 #por alguna razón debe ser el doble
 u_R_0 = 0.1
 alpha = 0.0048
-rad_0 = 0.21
-u_rad_0 = 0.01
+rad_0 = 0.00021
+u_rad_0 = 0.00001
 #Temperatura ambient
 T_amb_list = df.iloc[:,3].dropna().tolist()
 T_amb = np.mean(T_amb_list) + 273.15
@@ -22,6 +22,7 @@ u_I =0.1*10**(-3) #A
 V = df.iloc[:,0].dropna().tolist() #V
 I = df.iloc[:,1].dropna().tolist() #mA
 rad = df.iloc[:,2].dropna().tolist()
+rad = [q*10**(-3) for q in rad]
 R = np.array(V[1:])/(np.array(I[1:])*10**(-3)) - 0.8 #Ohm
 u_R = np.sqrt((u_V*np.array(I[1:])**(-1))**2 +(u_I*np.array(V[1:])*np.array(I[1:])**(-2))**2)
 
@@ -196,6 +197,7 @@ u_theta_rad = [float(i) for i in u_theta_rad]
 u_p_rad = [float(i) for i in u_p_rad]
 u_ln_p_rad = [float(i) for i in u_ln_p_rad]
 # Eliminaió d'outliers - Treiem els primers quatre punts ja que es desvien molt de la recta i tenen un error molt alt
+
 del p_rad[0:3]
 del theta_rad[0:3]
 del u_p_rad[0:3]
@@ -246,19 +248,19 @@ ss_res = np.sum(res**2)
 ss_tot = np.sum((y_data - np.mean(y_data))**2)
 r2= 1 -(ss_res/ss_tot)
 print()
-print('Coeficients del ajust quàrtic: ', coef4)
+print('Coeficients del ajust quàrtic: ', coef4, 'amb un error de ', [float(np.sqrt(cov4[0][0])),float(np.sqrt(cov4[1][1]))])
 print('Coeficient de regressió r2: ',r2)
 x= np.linspace(T[0],T[-1],100)
 y= coef4[0]*x**coef4[1]
 
 # Errors
-u_rad = [0.01]*(len(rad)-1)
+u_rad = [0.00001]*(len(rad)-1)
 
 plt.figure(figsize=(8,6))
 plt.plot(x,y,linestyle='--',color='k',label='Ajust polinòmic')
 plt.errorbar(T,rad[1:],xerr=u_T,yerr=u_rad,marker='D',label='Punts experimentals',linestyle='',capsize=5,elinewidth=0.7,color='firebrick')
-plt.xlabel('$T$')
-plt.ylabel('$Rad$')
+plt.xlabel('$T$ [K]')
+plt.ylabel('$Rad$ [W]')
 plt.minorticks_on()
 plt.tick_params(which= 'major', direction='in',top = True,right =True,size = 10)
 plt.tick_params(which= 'minor', direction='in',top = True,right =True,size = 5)
@@ -282,7 +284,7 @@ ss_tot = np.sum((y_data - np.mean(y_data))**2)
 r2= 1 -(ss_res/ss_tot)
 
 print()
-print('Coeficients del ajust lineal: ', coef4)
+print('Coeficients del ajust lineal: ', coef4, 'amb un error de ', [float(np.sqrt(cov4[0][0])),float(np.sqrt(cov4[1][1]))])
 print('Coeficient de regressió r2: ',r2)
 
 # Errors
@@ -301,4 +303,5 @@ plt.grid(linestyle='--')
 plt.legend(fontsize=14)
 plt.tight_layout()
 plt.savefig('graphs/practica_Ib/plots/ln_T_vs_ln_Rad.png',dpi=300)
+print(T[-1])
 

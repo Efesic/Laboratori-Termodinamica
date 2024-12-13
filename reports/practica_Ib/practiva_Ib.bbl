@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{llibre_lab}
+M.~D. Baró, S.~Bordas, J.~A. Ibáñez, J.~E Llevot, and S.~Suriñach.
+\newblock {\em Experiencias de Termodinámica}.
+\newblock Departamento de Termología, Universidad Autónoma de Barcelona,
+  primera edición edition, Diciembre 1985.
+
+\bibitem{PASCO}
+{PASCO scientific}.
+\newblock {\em Instruction Manual and Experiment Guide for the PASCO scientific
+  Model TD-8553/8554A/8555 Thermal Radiation System}.
+\newblock PASCO scientific, Roseville, CA, 1988.
+\newblock 012-04695D, Published March 1999.
+
+\bibitem{toolbox}
+{The Engineering ToolBox}.
+\newblock Metals - temperature expansion coefficients.
+\newblock
+  \url{https://www.engineeringtoolbox.com/thermal-expansion-metals-d_859.html},
+  2005.
+\newblock Accessed: 12 December 2024.
+
+\end{thebibliography}
