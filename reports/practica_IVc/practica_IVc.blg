@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: practica_IVc.aux
 The style file: plain.bst
 Database file #1: referencies_IVc.bib
-You've used 5 entries,
+You've used 7 entries,
             2118 wiz_defined-function locations,
-            530 strings with 5157 characters,
-and the built_in function-call counts, 1466 in all, are:
-= -- 140
-> -- 73
+            539 strings with 5383 characters,
+and the built_in function-call counts, 1876 in all, are:
+= -- 179
+> -- 87
 < -- 0
-+ -- 30
-- -- 24
-* -- 93
-:= -- 257
-add.period$ -- 18
-call.type$ -- 5
-change.case$ -- 27
++ -- 36
+- -- 28
+* -- 107
+:= -- 330
+add.period$ -- 24
+call.type$ -- 7
+change.case$ -- 35
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 49
-empty$ -- 118
-format.name$ -- 24
-if$ -- 302
+cite$ -- 7
+duplicate$ -- 66
+empty$ -- 157
+format.name$ -- 28
+if$ -- 388
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 5
-newline$ -- 31
-num.names$ -- 10
-pop$ -- 37
+int.to.str$ -- 7
+missing$ -- 6
+newline$ -- 41
+num.names$ -- 14
+pop$ -- 50
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 28
 quote$ -- 0
-skip$ -- 32
+skip$ -- 46
 stack$ -- 0
-substring$ -- 57
-swap$ -- 5
+substring$ -- 67
+swap$ -- 7
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
+type$ -- 24
 warning$ -- 0
-while$ -- 12
-width$ -- 6
-write$ -- 62
+while$ -- 16
+width$ -- 8
+write$ -- 82

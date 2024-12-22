@@ -179,7 +179,8 @@ i que existeixen les relacions
 \begin{equation*}
   \frac{K_ir_i}{K_jr_j} = \frac{p^2_j}{p^2_i}
 \end{equation*}
-on $i$ i $j$ prenen valors dels diferents metalls que estem estudiant (Al, Cu-Zn i Fe). Fent recerca a la literatura trobem el valor de la conductivitat tèrmica del ferro\footnote{Considerarem aquestes dades com a patró o referència, per tant no cal que els hi apliquem una incertesa.}\cite{CRC}:
+on $i$ i $j$ prenen valors dels diferents metalls que estem estudiant (Al, Cu-Zn i Fe). Observant la relació d'ordre de magnitud de les $K$ per a cada metall, podem presentar una conseqüència pràctica. En el cas d'haver de fabricar canonades o radiadors per a una instalació d'un sistema de calefacció amb un bon rendiment tèrmic, podem escollir, d'entre els metalls que estudiem en aquesta pràctica, aquells materials adients segons el que interessi. En el cas del radiador ens interessa un material amb una bona conductivitat que pugui escalfar l'aire que l'envolta. En el cas de les canonades, si són exteriors ens interessa un material amb molt poca conductivitat, si són internes no és necessari que tinguin poca conductivitat, però si que s'ha de garantir que no hi ha massa pèrdues de calor en l'aigua que hi circula. Per tant, el radiador s'hauria de fabricar amb alumini, les canonades exteriors de ferro, i les ineriors de llautó.\\\\
+Fent recerca a la literatura trobem el valor de la conductivitat tèrmica del ferro\footnote{Considerarem aquestes dades com a patró o referència, per tant no cal que els hi apliquem una incertesa.}\cite{CRC}:
 \begin{equation*}
   K_{\text{Fe}} =  0,802\, \text{W}/\text{cmK}
 \end{equation*}
@@ -235,7 +236,9 @@ per a l'aportació de la llei d'Stefan-Boltzmann. Calculant aquests llindars ten
 \end{Figura}
 Cal aclarir novament que aquestes dades es tracten de llindars, la potència absorbida o emesa pel sistema és diferent a cada punt i depèn d'altres factors, per exemple del ventilador que manté un flux d'aire al voltant de les barres. Tot i això, les dades ens són suficients per a notar que l'aportació de pèrdues per radiació, seguint la llei d'Stefan-Boltzmann i considerant una emisivitat ideal ($e=1$), és molt petita en comparació amb les altres dos. Sabent això concluim que podem menysprear del nostre model de l'aportació de la radiació.
 \subsection{Estat permanent}
-A partir de les dades obtingudes experimentalment representem l'evolució temporal de la temperatura segons cada posició de la barra gran, Figura \ref{fig:T_vs_t_gran}, i de la barra petita, \ref{fig:T_vs_t_petita}.
+A partir de les dades obtingudes experimentalment representem l'evolució temporal de la temperatura segons cada posició de la barra gran, Figura \ref{fig:T_vs_t_gran}, i de la barra petita, Figura \ref{fig:T_vs_t_petita}.\\\\
+Notem com l'evolució temporal mesurada de la temperatura és coherent amb la solució de l'Equació \eqref{sol_permanent}. El segón terme de la solució correspón a una funció periòdica en el temps que decau amb la distància i presenta un desfasament, també depenent de la distància.\\\\
+Tant a la Figura \ref{fig:T_vs_t_gran} com a la Figura \ref{fig:T_vs_t_petita} es veu que la temperatura és funció periòdica en el temps (és una ona tèrmica) i que, quant més lluny del punt de referència ens trobem, més petita és l'amplitud de d'aquesta ona. Tot i ser complicat a simple vista veure-ho, existeix un desfasament entre les oscil·lacions de la mateixa barra a diferents distàncies. Per a observar millor aquest desfasament podem preparar les dades d'una forma més convenient.
 \begin{Figura}
   \centering
   \includegraphics[width= 1\linewidth]{../../graphs/practica_Ia/plots/gran.png}
@@ -248,8 +251,8 @@ A partir de les dades obtingudes experimentalment representem l'evolució tempor
   \captionof{figure}{\footnotesize{Gràfica de $T$ en funció $t$ de la barra petita. Temperatures mesurades a una distància de \(0\,\text{cm}\) (vermell), \(10\,\text{cm}\) (verd) i \(20\,\text{cm}\) (blau) del punt de referència.}}
   \label{fig:T_vs_t_petita}
 \end{Figura}
-Notem com l'evolució temporal mesurada de la temperatura és coherent amb la solució de l'Equació \eqref{sol_permanent}. El segón terme de la solució correspón a una funció periòdica en el temps que decau amb la distància i presenta un desfasament, també depenent de la distància. Tant a la Figura \ref{fig:T_vs_t_gran} com a la Figura \ref{fig:T_vs_t_petita} es veu que la temperatura és funció periòdica en el temps (és una ona tèrmica) i que, quant més lluny del punt de referència ens trobem, més petita és l'amplitud de d'aquesta ona. Tot i ser complicat a simple vista veure-ho, existeix un desfasament entre les oscil·lacions de la mateixa barra a diferents distàncies. Per a observar millor aquest desfasament podem preparar les dades d'una forma més convenient.\\\\
-Com a pas previ a observar el desfasament, calculem la temperatura mitjana a cada punt de cada barra. Com a simplificació, calculem aquesta mitjana temporal fent una mitjana aritmètica de les dades obtingudes al laboratori. Els valors d'aquestes mitjanes venen recollits a la Taula \ref{Tau:mitjanes}.
+Com a pas previ a observar el desfasament, calculem la temperatura mitjana a cada punt de cada barra. Com a simplificació, calculem aquesta mitjana temporal fent una mitjana aritmètica de les dades obtingudes al laboratori. Els valors d'aquestes mitjanes venen recollits a la Taula \ref{Tau:mitjanes}.\\\\
+Observem com la temperatura mitjana decau amb la distància respecte a l'origen de referència. Clarament són pocs punts experimentals com per a traçar una corba de tendència. Tot i això, qualitativament els valors obtinguts s'apropen al que prediu la teoria. En cas de repetir l'experiment amb més termoparells repartits al llarg de cadascuna de les barres observariem un comportament de la mitjana temporal de la temperatura com el de l'Equació \eqref{prom_temp}. Si apliquem el mateix mètode que a l'estat estacionari per a obtenir el valor de $p$ obtenim els valors que s'observen a la Taula \ref{Tau:pendent_mitjana}. A partir d'aquestes dades realitzem una regressió i observem, Figura \ref{fig:lin_reg} com s'apropen molt a un comportament lineal.
 \begin{Figura}
   \centering
   \captionof{table}{\footnotesize{Temperatura mitjana ($\langle \theta \rangle$) a cada posició $x_i$ per a la barra gran i la barra petita.}}
@@ -267,7 +270,6 @@ Com a pas previ a observar el desfasament, calculem la temperatura mitjana a cad
   \end{tabular}
   \label{Tau:mitjanes}
 \end{Figura}
-Observem com la temperatura mitjana decau amb la distància respecte a l'origen de referència. Clarament són pocs punts experimentals com per a traçar una corba de tendència. Tot i això, qualitativament els valors obtinguts s'apropen al que prediu la teoria. En cas de repetir l'experiment amb més termoparells repartits al llarg de cadascuna de les barres observariem un comportament de la mitjana temporal de la temperatura com el de l'Equació \eqref{prom_temp}. Si apliquem el mateix mètode que a l'estat estacionari per a obtenir el valor de $p$ obtenim els valors que s'observen a la Taula \ref{Tau:pendent_mitjana}. A partir d'aquestes dades realitzem una regressió i observem, Figura \ref{fig:lin_reg} com s'apropen molt a un comportament lineal.
 \begin{Figura}
   \centering
   \captionof{table}{\footnotesize{Valors ajustats per a una regressió lineal, amb model $y = ax + b$, on $y$ és el logaritme de les temperatures mitjanes i $x$ les posicions $x_i$.}}
@@ -299,6 +301,7 @@ Un cop calculades les mitjanes per a cada punt, podem normalitzar les dades expe
 \end{Figura}
 Es pot obeservar com existeix desfasament entre dos punts diferents a cada barra, la ona tèrmica avança a mesura que augmenta la distància. A més, també es pot veure un comportament similar al que prediu l'Equació \eqref{desfasament}.\\\\
 Per a determinar l'amplitud de la ona a cada punt per a cada barra escollim un punt màxim i un mínim consecutius i calculem la meitat de la diferència. Amb aquestes dades realitzem una mitjana i obtenim les amplituds que s'observen a la Taula \ref{tau:amplituds_mitjanes_gran} i a la Taula \ref{tau:amplituds_mitjanes_petita}.
+\renewcommand{\arraystretch}{1.3}
 \begin{Figura}
   \centering
   \captionof{table}{\footnotesize{Amplitud promig de la ona tèrmica sesgons la distància al punt de referència per a la barra gran.}}
@@ -320,8 +323,7 @@ Per a determinar l'amplitud de la ona a cada punt per a cada barra escollim un p
     20 & 0,961  
   \end{tabular}
   \label{tau:amplituds_mitjanes_petita}
-\end{Figura} 
-Es pot observar com segueixen un comportament exponencial, similar al que hem vist a la Taula \ref{Tau:mitjanes}. Apliquem novament el mateix mètode amb les amplituds que amb les temperatures mitjanes i obtenim les regressions de la Figura \ref{fig:reg_lin_amplituds} i els valors dels pendents de la Taula \ref{tau:pendent_amplituds}.
+\end{Figura}
 \begin{Figura}
   \centering
   \captionof{table}{\footnotesize{Valors ajustats per a una regressió lineal, amb model $y = ax + b$, on $y$ és el logaritme de les amplituds i $x$ les posicions $x_i$.}}
@@ -332,6 +334,8 @@ Es pot observar com segueixen un comportament exponencial, similar al que hem vi
   \end{tabular}
   \label{tau:pendent_amplituds}
 \end{Figura} 
+\renewcommand{\arraystretch}{1}
+Es pot observar com segueixen un comportament exponencial, similar al que hem vist a la Taula \ref{Tau:mitjanes}. Apliquem novament el mateix mètode amb les amplituds que amb les temperatures mitjanes i obtenim les regressions de la Figura \ref{fig:reg_lin_amplituds} i els valors dels pendents de la Taula \ref{tau:pendent_amplituds}.
 \begin{Figura}
   \centering
   \includegraphics[width=1\linewidth]{../../graphs/practica_Ia/plots/reg_ampli.png}
